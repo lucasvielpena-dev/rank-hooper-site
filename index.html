@@ -4,8 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Rank Hooper — Ranking de basquete da sua cidade</title>
-  <meta name="description" content="Rank Hooper: avalie jogadores, dispute rachões e torneios, e suba no ranking da sua cidade. App de basquete peer-to-peer." />
+  <meta name="description" content="Rank Hooper: avalie jogadores, dispute rachões e torneios, e suba no ranking da sua cidade. App de basquete entre jogadores da sua cidade." />
   <meta name="theme-color" content="#0B0F14" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rank Hooper" />
+  <meta property="og:title" content="Rank Hooper — Ranking de basquete da sua cidade" />
+  <meta property="og:description" content="Avalie jogadores, dispute rachões e torneios e suba no ranking da sua cidade." />
+  <meta property="og:url" content="https://bask-rank-hooper.vercel.app" />
+  <meta property="og:image" content="https://bask-rank-hooper.vercel.app/icon-512.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C8F135'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%230C0C14' stroke-width='2'/%3E%3Cline x1='7' y1='16' x2='25' y2='16' stroke='%230C0C14' stroke-width='2'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -200,7 +208,7 @@
   <header class="top">
     <div class="top-inner">
       <a class="logo" href="#">
-        <div class="logo-mark">🏀</div>
+        <div class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg></div>
         RANK <span>HOOPER</span>
       </a>
       <div class="nav-links">
@@ -248,7 +256,7 @@
             <div class="step-n">2</div>
             <div>
               <h3>Ative a localização</h3>
-              <p>O app usa a cidade onde você está. Assim o ranking, as avaliações e os jogos ficam locais — não mistura com outras cidades.</p>
+              <p>O app pede permissão para confirmar a cidade onde você está. Se você mudar de cidade, ele pergunta antes de trocar. Assim o ranking e as avaliações ficam locais.</p>
             </div>
           </div>
           <div class="step">
@@ -275,42 +283,42 @@
         <p class="sec-sub">Tudo pensado para quem joga bola de verdade.</p>
         <div class="grid">
           <div class="card">
-            <div class="ico">★</div>
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><polygon points="12 3 14.9 9 21.5 9.6 16.5 14 18 20.5 12 17 6 20.5 7.5 14 2.5 9.6 9.1 9"/></svg></div>
             <h3>Ranking por cidade</h3>
             <p>Lista os atletas da sua cidade com média e nível de confiança. Quem tem poucos votos não “engana” o ranking.</p>
           </div>
           <div class="card">
-            <div class="ico">📊</div>
-            <h3>Avaliação completa</h3>
-            <p>Várias habilidades: arremesso, finalização, controle de bola, passe, defesas, rebote, velocidade, força e garra.</p>
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="20" x2="6" y2="12"/><line x1="12" y1="20" x2="12" y2="6"/><line x1="18" y1="20" x2="18" y2="10"/></svg></div>
+            <h3>Avaliação em 10 critérios</h3>
+            <p>Arremesso, infiltração e finalização, controle de bola, passe e visão de jogo, defesa perimetral, defesa de garrafão, rebote, velocidade e agilidade, explosão e força, e trabalho em equipe e garra.</p>
           </div>
           <div class="card">
-            <div class="ico">🏙</div>
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="4" y="8" width="7" height="13"/><rect x="13" y="3" width="7" height="18"/><line x1="7" y1="12" x2="7" y2="12.01"/><line x1="16" y1="7" x2="16" y2="7.01"/></svg></div>
             <h3>Explorar cidades</h3>
             <p>Viajou? Veja o ranking de outra cidade em modo consulta — sem poder votar de fora.</p>
           </div>
           <div class="card">
-            <div class="ico">🏀</div>
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg></div>
             <h3>Rachões</h3>
             <p>Monte ou entre em jogos casuais. Combinem horário, local e quem joga.</p>
           </div>
           <div class="card">
-            <div class="ico">⏱</div>
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></div>
             <h3>Partidas e placar</h3>
             <p>Crie partida, some pontos e use o cronômetro compartilhado entre os celulares.</p>
           </div>
           <div class="card">
-            <div class="ico">🏆</div>
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H5a3 3 0 0 0 3 4"/><path d="M16 6h3a3 3 0 0 1-3 4"/><line x1="12" y1="13" x2="12" y2="17"/><line x1="8" y1="20" x2="16" y2="20"/></svg></div>
             <h3>Torneios</h3>
             <p>Cadastre competições, equipes e acompanhe o andamento na sua região.</p>
           </div>
           <div class="card">
-            <div class="ico">🔔</div>
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg></div>
             <h3>Notificações</h3>
             <p>Avisos de convites, avaliações e movimentações importantes.</p>
           </div>
           <div class="card">
-            <div class="ico">🌓</div>
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg></div>
             <h3>Modo claro e escuro</h3>
             <p>Escolha o tema que preferir nas configurações do perfil.</p>
           </div>
@@ -326,6 +334,10 @@
           <div class="legend-item">
             <strong>Provisório</strong>
             Ainda poucos votos. A nota pode mudar bastante com novas avaliações.
+          </div>
+          <div class="legend-item">
+            <strong>Em evolução</strong>
+            Já tem alguns votos, e a nota ainda pode mudar com novas avaliações.
           </div>
           <div class="legend-item">
             <strong>Consolidado</strong>
@@ -367,11 +379,10 @@
 
   <footer>
     <div class="wrap">
-      <p><strong style="color:var(--text)">Rank Hooper</strong> — ranking de basquete peer-to-peer</p>
+      <p><strong style="color:var(--text)">Rank Hooper</strong> — ranking de basquete entre jogadores da sua cidade</p>
       <p style="margin-top:8px">
-        Aplicativo:
-        <a href="https://bask-rank-hooper.vercel.app" target="_blank" rel="noopener">abrir app</a>
-        · Esta página só explica o produto (site separado)
+        <a href="https://bask-rank-hooper.vercel.app" target="_blank" rel="noopener">Abrir o app</a>
+        · <a href="https://bask-rank-hooper.vercel.app/privacidade.html" target="_blank" rel="noopener">Política de privacidade</a>
       </p>
     </div>
   </footer>
