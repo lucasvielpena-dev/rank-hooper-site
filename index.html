@@ -351,48 +351,66 @@
       </div>
     </div>
 
-    <section class="band-section" style="padding:0;border-top:none">
+    <div class="court-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 42" preserveAspectRatio="none">
+        <path d="M0 21 H520 M680 21 H1200" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <circle cx="600" cy="21" r="20" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <line x1="600" y1="1" x2="600" y2="41" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <section id="telas">
       <div class="wrap">
-        <div class="stats-band">
-          <div class="stat"><b>10</b><span>critérios de avaliação</span></div>
-          <div class="stat"><b>20</b><span>avaliações por dia, por pessoa</span></div>
-          <div class="stat"><b>2 a 20</b><span>vagas em cada rachão</span></div>
-          <div class="stat"><b>1</b><span>ranking por cidade</span></div>
+        <h2 class="sec-title">Por dentro do app</h2>
+        <p class="sec-sub">Telas reais do Rank Hooper. Nomes e fotos foram trocados por privacidade.</p>
+        <div class="shots">
+          <figure class="shot">
+            <img src="img/1_inicio.jpg" alt="Tela inicial com o destaque da cidade e os destaques da semana" loading="lazy" />
+            <figcaption><strong>Início</strong>O destaque da sua cidade e os melhores da semana, com nota e número de avaliações.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="img/2_atletas.jpg" alt="Lista de atletas da cidade com filtros de ranking" loading="lazy" />
+            <figcaption><strong>Atletas</strong>O ranking da cidade, com filtros para ver os melhores, os recentes e quem tem poucas avaliações.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="img/3_criterios.jpg" alt="Tela de avaliação com notas de estrelas nos fundamentos" loading="lazy" />
+            <figcaption><strong>Avaliação</strong>Notas de 1 a 5 estrelas em cada fundamento do jogo.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="img/4_rachao.jpg" alt="Formulário para criar um rachão" loading="lazy" />
+            <figcaption><strong>Rachões</strong>Monte o jogo com local, data, vagas e nível. Quando lota, fecha sozinho.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="img/5_competicoes.jpg" alt="Tela de competições com partidas, histórico e torneios" loading="lazy" />
+            <figcaption><strong>Competições</strong>Partidas, histórico e torneios reunidos num só lugar.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
     <section id="como-funciona">
       <div class="wrap">
-        <h2 class="sec-title">Como funciona</h2>
-        <p class="sec-sub">Em poucos passos você já está no ranking da sua cidade.</p>
+        <h2 class="sec-title">Como começar</h2>
+        <p class="sec-sub">Três passos e você já está no ranking da sua cidade.</p>
         <div class="steps">
           <div class="step">
             <div class="step-n">1</div>
             <div>
               <h3>Crie sua conta</h3>
-              <p>Entre com e-mail ou Google. Complete o perfil de atleta (nome, posição, foto opcional).</p>
+              <p>Entre com e-mail ou Google e complete seu perfil de atleta.</p>
             </div>
           </div>
           <div class="step">
             <div class="step-n">2</div>
             <div>
-              <h3>Ative a localização</h3>
-              <p>O app pede permissão para confirmar a cidade onde você está. Se você mudar de cidade, ele pergunta antes de trocar. Assim o ranking e as avaliações ficam locais.</p>
+              <h3>Confirme sua cidade</h3>
+              <p>Com sua permissão, o app confirma onde você está. Se mudar de cidade, ele pergunta antes de trocar.</p>
             </div>
           </div>
           <div class="step">
             <div class="step-n">3</div>
             <div>
-              <h3>Avalie e seja avaliado</h3>
-              <p>Só atletas da mesma cidade podem se avaliar, em fundamentos de basquete (arremesso, defesa, passe, etc.). A média sobe com votos e confiança.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-n">4</div>
-            <div>
-              <h3>Jogue rachões, partidas e torneios</h3>
-              <p>Organize ou entre em jogos, acompanhe placar ao vivo e dispute competições da região.</p>
+              <h3>Avalie e jogue</h3>
+              <p>Só avalia quem é da sua cidade. Você também pode marcar rachões e acompanhar as partidas.</p>
             </div>
           </div>
         </div>
@@ -401,38 +419,18 @@
 
     <section id="funcoes">
       <div class="wrap">
-        <h2 class="sec-title">O que tem no app</h2>
-        <p class="sec-sub">Tudo pensado para quem joga bola de verdade.</p>
+        <h2 class="sec-title">Também no app</h2>
+        <p class="sec-sub">Recursos que completam a experiência.</p>
         <div class="grid">
           <div class="card">
-            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><polygon points="12 3 14.9 9 21.5 9.6 16.5 14 18 20.5 12 17 6 20.5 7.5 14 2.5 9.6 9.1 9"/></svg></div>
-            <h3>Ranking por cidade</h3>
-            <p>Lista os atletas da sua cidade com média e nível de confiança. Quem tem poucos votos não “engana” o ranking.</p>
-          </div>
-          <div class="card">
-            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="20" x2="6" y2="12"/><line x1="12" y1="20" x2="12" y2="6"/><line x1="18" y1="20" x2="18" y2="10"/></svg></div>
-            <h3>Avaliação em 10 critérios</h3>
-            <p>Arremesso, infiltração e finalização, controle de bola, passe e visão de jogo, defesa perimetral, defesa de garrafão, rebote, velocidade e agilidade, explosão e força, e trabalho em equipe e garra.</p>
-          </div>
-          <div class="card">
-            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="4" y="8" width="7" height="13"/><rect x="13" y="3" width="7" height="18"/><line x1="7" y1="12" x2="7" y2="12.01"/><line x1="16" y1="7" x2="16" y2="7.01"/></svg></div>
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="4" y="8" width="7" height="13"/><rect x="13" y="3" width="7" height="18"/></svg></div>
             <h3>Explorar cidades</h3>
-            <p>Viajou? Veja o ranking de outra cidade em modo consulta — sem poder votar de fora.</p>
-          </div>
-          <div class="card">
-            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg></div>
-            <h3>Rachões</h3>
-            <p>Monte ou entre em jogos casuais. Combinem horário, local e quem joga.</p>
-          </div>
-          <div class="card">
-            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></div>
-            <h3>Partidas e placar</h3>
-            <p>Crie partida, some pontos e use o cronômetro compartilhado entre os celulares.</p>
+            <p>Viajou? Veja o ranking de outra cidade em modo consulta, sem poder votar de fora.</p>
           </div>
           <div class="card">
             <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H5a3 3 0 0 0 3 4"/><path d="M16 6h3a3 3 0 0 1-3 4"/><line x1="12" y1="13" x2="12" y2="17"/><line x1="8" y1="20" x2="16" y2="20"/></svg></div>
             <h3>Torneios</h3>
-            <p>Cadastre competições, equipes e acompanhe o andamento na sua região.</p>
+            <p>Cadastre a competição, as equipes e acompanhe o andamento na sua região.</p>
           </div>
           <div class="card">
             <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg></div>
@@ -444,42 +442,6 @@
             <h3>Modo claro e escuro</h3>
             <p>Escolha o tema que preferir nas configurações do perfil.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="court-divider" aria-hidden="true">
-      <svg viewBox="0 0 1200 42" preserveAspectRatio="none">
-        <path d="M0 21 H520 M680 21 H1200" stroke="currentColor" stroke-width="1.5" fill="none"/>
-        <circle cx="600" cy="21" r="20" stroke="currentColor" stroke-width="1.5" fill="none"/>
-        <line x1="600" y1="1" x2="600" y2="41" stroke="currentColor" stroke-width="1.5"/>
-      </svg>
-    </div>
-    <section id="telas">
-      <div class="wrap">
-        <h2 class="sec-title">Por dentro do app</h2>
-        <p class="sec-sub">Algumas telas reais do Rank Hooper. Os nomes e fotos foram trocados para preservar a privacidade.</p>
-        <div class="shots">
-          <figure class="shot">
-            <img src="img/1_inicio.jpg" alt="Tela inicial com o destaque da cidade e os destaques da semana" loading="lazy" />
-            <figcaption><strong>Início</strong>Veja o melhor da sua cidade e os destaques da semana, com a nota e o número de avaliações.</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="img/2_atletas.jpg" alt="Lista de atletas da cidade com filtros de ranking" loading="lazy" />
-            <figcaption><strong>Atletas</strong>O ranking da sua cidade, com filtros para ver quem está no topo, quem é recente e quem tem poucas avaliações.</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="img/3_criterios.jpg" alt="Tela de avaliação com notas de estrelas em cinco fundamentos" loading="lazy" />
-            <figcaption><strong>Avaliação</strong>Dê de 1 a 5 estrelas em cada fundamento do basquete. Sua nota ajuda a formar o ranking.</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="img/4_rachao.jpg" alt="Formulário para criar um rachão com título, local, data, vagas e nível" loading="lazy" />
-            <figcaption><strong>Rachões</strong>Crie um jogo casual com local, data, número de vagas e nível. Quando as vagas acabam, o rachão fecha sozinho.</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="img/5_competicoes.jpg" alt="Tela de competições com abas de partidas, histórico e torneios" loading="lazy" />
-            <figcaption><strong>Competições</strong>Partidas, histórico e torneios da região reunidos em um só lugar.</figcaption>
-          </figure>
         </div>
       </div>
     </section>
