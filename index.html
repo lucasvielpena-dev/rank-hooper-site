@@ -278,7 +278,7 @@
       position: relative;
       border-radius: 34px;
       overflow: hidden;
-      aspect-ratio: 502 / 756;
+      aspect-ratio: 1170 / 2532;
       background: #0C0C14;
       touch-action: pan-y;
     }
@@ -511,7 +511,7 @@
                 <div class="phone-notch" aria-hidden="true"></div>
                 <div class="phone-screen" id="tourScreen">
                   <figure class="shot" data-active="true" data-key="inicio">
-                    <img src="img/1_inicio.jpg" alt="Tela inicial do Rank Hooper com o melhor da cidade, a nota dele e os destaques da semana" />
+                    <img src="img/1_inicio.jpg" alt="Tela inicial do Rank Hooper com o destaque da cidade, a nota do atleta e os destaques da semana" />
                   </figure>
                   <figure class="shot" data-active="false" data-key="atletas">
                     <img src="img/2_atletas.jpg" alt="Tela de atletas com o ranking da cidade, busca e filtros" />
@@ -556,11 +556,11 @@
           <div class="tour-side">
             <div class="tour-tabs" id="tourTabs" role="tablist" aria-orientation="vertical" aria-label="Telas do aplicativo">
               <button class="tour-tab" type="button" role="tab" id="tab-inicio" aria-controls="tourStage" aria-selected="true" tabindex="0" data-index="0" data-key="inicio"
-                data-caption="O destaque da sua cidade e os melhores da semana.">
+                data-caption="Seu destaque na cidade e quem se sobressaiu na semana.">
                 <span class="tour-tab-n">1</span>
                 <span>
                   <span class="tour-tab-t">Início</span>
-                  <span class="tour-tab-d">O nº 1 da cidade em destaque, seu lugar no ranking e quem se sobressaiu na semana.</span>
+                  <span class="tour-tab-d">Seu card na cidade, a nota média, o selo de confiança e quem se destacou na semana.</span>
                 </span>
               </button>
               <button class="tour-tab" type="button" role="tab" id="tab-atletas" aria-controls="tourStage" aria-selected="false" tabindex="-1" data-index="1" data-key="atletas"
@@ -592,7 +592,7 @@
                 <span class="tour-tab-n">5</span>
                 <span>
                   <span class="tour-tab-t">Competições</span>
-                  <span class="tour-tab-d">Crie o torneio, cadastre as equipes e acompanhe os jogos da região.</span>
+                  <span class="tour-tab-d">Acompanhe partidas, o histórico com placares e os torneios da região.</span>
                 </span>
               </button>
             </div>
@@ -770,35 +770,35 @@
       /* Pontos numerados de cada tela (x/y em % da imagem) */
       var PINS = {
         inicio: [
-          { x: 17, y: 16, label: 'Destaque da cidade', text: 'Quem está em 1º no ranking da cidade aparece aqui, em destaque, ao abrir o app.' },
-          { x: 12, y: 27, label: 'Ficha do atleta', text: 'Posição no ranking, nome, posição de jogo, nota média e quantas avaliações recebeu.' },
-          { x: 48, y: 45, label: 'Ranking completo', text: 'Um toque abre a lista completa da cidade, com filtros e busca.' },
-          { x: 20, y: 56, label: 'Destaques da semana', text: 'Quem mais pontuou nos últimos 7 dias. Notas novas aparecem como provisórias.' },
-          { x: 26, y: 94, label: 'Atalhos fixos', text: 'Início, Atletas, Rachões, Competições e Perfil ficam sempre à mão na barra de baixo.' }
+          { x: 27, y: 22.5, label: 'Destaque da cidade', text: 'Seu card na cidade: posição no ranking, nota média e o selo de confiança (top X% da cidade).' },
+          { x: 27, y: 31, label: 'Sua ficha', text: 'Nome, posição de jogo, nota média e quantas avaliações você já recebeu.' },
+          { x: 50, y: 45, label: 'Ranking completo', text: 'Um toque abre a lista completa da cidade, com busca e filtros.' },
+          { x: 26, y: 53.4, label: 'Destaques da semana', text: 'Quem mais pontuou nos últimos 7 dias. Notas novas aparecem como provisórias.' },
+          { x: 50, y: 95, label: 'Atalhos fixos', text: 'Início, Atletas, Rachões, Competições e Perfil ficam sempre à mão na barra de baixo.' }
         ],
         atletas: [
-          { x: 25, y: 24, label: 'Minha cidade ou outras', text: 'Alterne entre o ranking da sua cidade e o de outras cidades, em modo consulta.' },
-          { x: 50, y: 33, label: 'Busca', text: 'Procure um atleta pelo nome dentro da cidade.' },
-          { x: 22, y: 43, label: 'Filtros do ranking', text: 'Veja os melhores, os que entraram por último ou quem ainda tem poucas avaliações.' },
-          { x: 88, y: 50, label: 'Selos', text: 'Marcas no card mostram categoria e mudanças recentes de nota.' },
-          { x: 45, y: 63, label: 'Perfil e avaliar', text: 'Abra o perfil completo ou registre sua avaliação do atleta.' }
+          { x: 25, y: 20, label: 'Minha cidade ou outras', text: 'Alterne entre o ranking da sua cidade e o de outras cidades, em modo consulta.' },
+          { x: 50, y: 27.4, label: 'Busca', text: 'Procure um atleta pelo nome dentro da cidade.' },
+          { x: 50, y: 35.1, label: 'Filtros do ranking', text: 'Veja os melhores, os que entraram por último ou quem ainda tem poucas avaliações.' },
+          { x: 88, y: 44.4, label: 'Selos', text: 'Marcas no card mostram categoria e mudanças recentes de nota.' },
+          { x: 30, y: 50.4, label: 'Perfil e avaliar', text: 'Abra o perfil completo ou registre sua avaliação do atleta.' }
         ],
         criterios: [
-          { x: 33, y: 12, label: 'Fundamento', text: 'Cada fundamento do jogo é avaliado separadamente, num card próprio.' },
-          { x: 80, y: 12, label: 'Média do item', text: 'A nota média do fundamento aparece já calculada ao lado.' },
-          { x: 50, y: 19, label: 'De 1 a 5 estrelas', text: 'Você toca nas estrelas para dar a nota. O card pintado é o que você está avaliando.' }
+          { x: 30, y: 23.8, label: 'Fundamento', text: 'Cada fundamento do jogo é avaliado separadamente, num card próprio.' },
+          { x: 88, y: 23.8, label: 'Média do item', text: 'A nota média do fundamento aparece já calculada ao lado.' },
+          { x: 50, y: 28.5, label: 'De 1 a 5 estrelas', text: 'As estrelas mostram a nota do fundamento. Toque para ajustar a sua avaliação.' }
         ],
         rachao: [
-          { x: 85, y: 17, label: 'Criar rachão', text: 'Abre o formulário para montar um jogo novo na sua cidade.' },
-          { x: 50, y: 40, label: 'Título e local', text: 'Dê um nome ao rachão e informe a quadra ou ginásio.' },
-          { x: 50, y: 65, label: 'Data e hora', text: 'Defina quando o jogo acontece.' },
-          { x: 50, y: 75, label: 'Vagas e nível', text: 'Limite de jogadores e o nível do jogo, de todos até alto.' },
-          { x: 50, y: 88, label: 'Publicar', text: 'O rachão vai para o mural. Quando as vagas lotam, ele fecha sozinho.' }
+          { x: 86, y: 14.5, label: 'Criar rachão', text: 'Abre o formulário para montar um jogo novo na sua cidade.' },
+          { x: 50, y: 65.8, label: 'Título e local', text: 'Dê um nome ao rachão e informe a quadra ou ginásio.' },
+          { x: 50, y: 79.3, label: 'Data e hora', text: 'Defina quando o jogo acontece.' },
+          { x: 50, y: 88.3, label: 'Vagas e nível', text: 'Limite de jogadores e o nível do jogo, de todos até alto.' },
+          { x: 50, y: 94.9, label: 'Publicar', text: 'O rachão vai para o mural. Quando as vagas lotam, ele fecha sozinho.' }
         ],
         competicoes: [
-          { x: 82, y: 17, label: 'Novo torneio', text: 'Cadastre a competição, as equipes e o formato.' },
-          { x: 50, y: 26, label: 'Três abas', text: 'Partidas, histórico do que já rolou e torneios da região.' },
-          { x: 50, y: 61, label: 'Seus torneios', text: 'Aqui aparecem os torneios ativos e os jogos da competição.' }
+          { x: 82, y: 12.7, label: 'Novo jogo', text: 'Crie uma partida ou cadastre um torneio da região.' },
+          { x: 50, y: 19.6, label: 'Três abas', text: 'Partidas em andamento, histórico do que já rolou e torneios da região.' },
+          { x: 50, y: 29.5, label: 'Partida finalizada', text: 'Placar, duração e o atalho para avaliar quem jogou.' }
         ]
       };
 
