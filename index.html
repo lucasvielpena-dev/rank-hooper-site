@@ -202,6 +202,52 @@
       .nav-links a.hide-m { display: none; }
       .hero { padding: 40px 0 28px; }
     }
+  
+    /* telas do app */
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 18px;
+    }
+    .shot {
+      margin: 0;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 12px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      transition: transform 0.35s ease;
+    }
+    .shot figcaption {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .shot figcaption strong {
+      display: block;
+      color: var(--text);
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .shot:hover {
+      transform: translateY(-6px);
+      border-color: rgba(200,241,53,0.45);
+      box-shadow: 0 18px 40px -12px rgba(200,241,53,0.25);
+    }
+    .shot:hover img {
+      transform: scale(1.02);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .shot, .shot img { transition: none; }
+      .shot:hover, .shot:hover img { transform: none; }
+    }
   </style>
 </head>
 <body>
@@ -214,6 +260,7 @@
       <div class="nav-links">
         <a class="hide-m" href="#como-funciona">Como funciona</a>
         <a class="hide-m" href="#funcoes">Funções</a>
+        <a class="hide-m" href="#telas">Telas</a>
         <a class="hide-m" href="#legenda">Legenda</a>
         <a class="btn btn-primary btn-sm" href="https://bask-rank-hooper.vercel.app" target="_blank" rel="noopener">Entrar no app</a>
       </div>
@@ -322,6 +369,35 @@
             <h3>Modo claro e escuro</h3>
             <p>Escolha o tema que preferir nas configurações do perfil.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="telas">
+      <div class="wrap">
+        <h2 class="sec-title">Por dentro do app</h2>
+        <p class="sec-sub">Algumas telas reais do Rank Hooper. Os nomes e fotos foram trocados para preservar a privacidade.</p>
+        <div class="shots">
+          <figure class="shot">
+            <img src="img/1_inicio.jpg" alt="Tela inicial com o destaque da cidade e os destaques da semana" loading="lazy" />
+            <figcaption><strong>Início</strong>Veja o melhor da sua cidade e os destaques da semana, com a nota e o número de avaliações.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="img/2_atletas.jpg" alt="Lista de atletas da cidade com filtros de ranking" loading="lazy" />
+            <figcaption><strong>Atletas</strong>O ranking da sua cidade, com filtros para ver quem está no topo, quem é recente e quem tem poucas avaliações.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="img/3_criterios.jpg" alt="Tela de avaliação com notas de estrelas em cinco fundamentos" loading="lazy" />
+            <figcaption><strong>Avaliação</strong>Dê de 1 a 5 estrelas em cada fundamento do basquete. Sua nota ajuda a formar o ranking.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="img/4_rachao.jpg" alt="Formulário para criar um rachão com título, local, data, vagas e nível" loading="lazy" />
+            <figcaption><strong>Rachões</strong>Crie um jogo casual com local, data, número de vagas e nível. Quando as vagas acabam, o rachão fecha sozinho.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="img/5_competicoes.jpg" alt="Tela de competições com abas de partidas, histórico e torneios" loading="lazy" />
+            <figcaption><strong>Competições</strong>Partidas, histórico e torneios da região reunidos em um só lugar.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
