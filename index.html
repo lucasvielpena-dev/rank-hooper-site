@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Rank Hooper — Ranking de basquete da sua cidade</title>
+  <meta name="description" content="Rank Hooper: avalie jogadores, dispute rachões e torneios, e suba no ranking da sua cidade. App de basquete peer-to-peer." />
+  <meta name="theme-color" content="#0B0F14" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0B0F14;
+      --bg2: #121820;
+      --card: #161D27;
+      --accent: #C8F135;
+      --accent-dim: rgba(200, 241, 53, 0.12);
+      --text: #F4F6F8;
+      --muted: #8B95A8;
+      --line: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      min-height: 100vh;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+
+    /* nav */
+    .top {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(11,15,20,0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .top-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 920px; margin: 0 auto; padding: 14px 20px;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 22px; letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+    .logo-mark {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--accent); color: #0C0C14;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 18px; align-items: center; }
+    .nav-links a {
+      text-decoration: none; font-size: 13px; font-weight: 600;
+      color: var(--muted);
+    }
+    .nav-links a:hover { color: var(--text); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 22px; border-radius: 999px; border: none;
+      font-weight: 800; font-size: 14px; font-family: inherit;
+      text-decoration: none; cursor: pointer;
+      transition: transform 0.15s, filter 0.15s;
+    }
+    .btn:hover { filter: brightness(1.05); transform: translateY(-1px); }
+    .btn-primary { background: var(--accent); color: #0C0C14; }
+    .btn-ghost {
+      background: transparent; color: var(--text);
+      border: 1px solid var(--line);
+    }
+    .btn-sm { padding: 8px 16px; font-size: 13px; }
+
+    /* hero */
+    .hero {
+      padding: 56px 0 40px;
+      text-align: center;
+      background:
+        radial-gradient(700px 320px at 50% -10%, rgba(200,241,53,0.14), transparent 60%),
+        var(--bg);
+    }
+    .pill {
+      display: inline-block;
+      padding: 6px 12px; border-radius: 999px;
+      background: var(--accent-dim); color: var(--accent);
+      font-size: 12px; font-weight: 700; letter-spacing: 0.04em;
+      text-transform: uppercase; margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(36px, 8vw, 56px);
+      font-weight: 800; letter-spacing: 0.02em;
+      line-height: 1.05; margin-bottom: 14px;
+    }
+    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero p {
+      max-width: 520px; margin: 0 auto 28px;
+      color: var(--muted); font-size: 16px;
+    }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+    /* sections */
+    section { padding: 48px 0; }
+    section + section { border-top: 1px solid var(--line); }
+    .sec-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 28px; font-weight: 800; letter-spacing: 0.03em;
+      text-transform: uppercase; margin-bottom: 8px;
+    }
+    .sec-sub { color: var(--muted); margin-bottom: 28px; font-size: 15px; max-width: 560px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px 18px;
+    }
+    .card .ico {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: var(--accent-dim); color: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; margin-bottom: 12px;
+    }
+    .card h3 {
+      font-size: 16px; font-weight: 800; margin-bottom: 6px;
+    }
+    .card p { font-size: 14px; color: var(--muted); }
+
+    .steps { display: flex; flex-direction: column; gap: 12px; }
+    .step {
+      display: flex; gap: 14px; align-items: flex-start;
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 14px; padding: 16px;
+    }
+    .step-n {
+      flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
+      background: var(--accent); color: #0C0C14;
+      font-weight: 900; font-size: 14px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .step h3 { font-size: 15px; font-weight: 800; margin-bottom: 4px; }
+    .step p { font-size: 13px; color: var(--muted); }
+
+    .legend {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    .legend-item {
+      background: var(--bg2); border: 1px solid var(--line);
+      border-radius: 12px; padding: 14px;
+      font-size: 13px;
+    }
+    .legend-item strong {
+      display: block; color: var(--accent); margin-bottom: 4px;
+      font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+
+    .cta-block {
+      text-align: center;
+      background: linear-gradient(180deg, rgba(200,241,53,0.08), transparent);
+      border: 1px solid rgba(200,241,53,0.25);
+      border-radius: 20px;
+      padding: 36px 24px;
+      margin: 20px 0 40px;
+    }
+    .cta-block h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 28px; font-weight: 800; margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .cta-block p { color: var(--muted); margin-bottom: 20px; font-size: 14px; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 20px 40px;
+      text-align: center;
+      color: var(--muted); font-size: 12px;
+    }
+    footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+    @media (max-width: 560px) {
+      .nav-links a.hide-m { display: none; }
+      .hero { padding: 40px 0 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <a class="logo" href="#">
+        <div class="logo-mark">🏀</div>
+        RANK <span>HOOPER</span>
+      </a>
+      <div class="nav-links">
+        <a class="hide-m" href="#como-funciona">Como funciona</a>
+        <a class="hide-m" href="#funcoes">Funções</a>
+        <a class="hide-m" href="#legenda">Legenda</a>
+        <a class="btn btn-primary btn-sm" href="https://bask-rank-hooper.vercel.app" target="_blank" rel="noopener">Entrar no app</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <div class="pill">Basquete · Ranking · Sua cidade</div>
+        <h1>O ranking de basquete<br />da <em>sua cidade</em></h1>
+        <p>
+          Avalie jogadores de verdade, dispute rachões e torneios,
+          e veja quem sobe no ranking — tudo no celular, só com quem joga perto de você.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://bask-rank-hooper.vercel.app" target="_blank" rel="noopener">
+            Abrir o aplicativo
+          </a>
+          <a class="btn btn-ghost" href="#como-funciona">
+            Ver como funciona
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section id="como-funciona">
+      <div class="wrap">
+        <h2 class="sec-title">Como funciona</h2>
+        <p class="sec-sub">Em poucos passos você já está no ranking da sua cidade.</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-n">1</div>
+            <div>
+              <h3>Crie sua conta</h3>
+              <p>Entre com e-mail ou Google. Complete o perfil de atleta (nome, posição, foto opcional).</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">2</div>
+            <div>
+              <h3>Ative a localização</h3>
+              <p>O app usa a cidade onde você está. Assim o ranking, as avaliações e os jogos ficam locais — não mistura com outras cidades.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">3</div>
+            <div>
+              <h3>Avalie e seja avaliado</h3>
+              <p>Só atletas da mesma cidade podem se avaliar, em fundamentos de basquete (arremesso, defesa, passe, etc.). A média sobe com votos e confiança.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">4</div>
+            <div>
+              <h3>Jogue rachões, partidas e torneios</h3>
+              <p>Organize ou entre em jogos, acompanhe placar ao vivo e dispute competições da região.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="funcoes">
+      <div class="wrap">
+        <h2 class="sec-title">O que tem no app</h2>
+        <p class="sec-sub">Tudo pensado para quem joga bola de verdade.</p>
+        <div class="grid">
+          <div class="card">
+            <div class="ico">★</div>
+            <h3>Ranking por cidade</h3>
+            <p>Lista os atletas da sua cidade com média e nível de confiança. Quem tem poucos votos não “engana” o ranking.</p>
+          </div>
+          <div class="card">
+            <div class="ico">📊</div>
+            <h3>Avaliação completa</h3>
+            <p>Várias habilidades: arremesso, finalização, controle de bola, passe, defesas, rebote, velocidade, força e garra.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🏙</div>
+            <h3>Explorar cidades</h3>
+            <p>Viajou? Veja o ranking de outra cidade em modo consulta — sem poder votar de fora.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🏀</div>
+            <h3>Rachões</h3>
+            <p>Monte ou entre em jogos casuais. Combinem horário, local e quem joga.</p>
+          </div>
+          <div class="card">
+            <div class="ico">⏱</div>
+            <h3>Partidas e placar</h3>
+            <p>Crie partida, some pontos e use o cronômetro compartilhado entre os celulares.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🏆</div>
+            <h3>Torneios</h3>
+            <p>Cadastre competições, equipes e acompanhe o andamento na sua região.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🔔</div>
+            <h3>Notificações</h3>
+            <p>Avisos de convites, avaliações e movimentações importantes.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🌓</div>
+            <h3>Modo claro e escuro</h3>
+            <p>Escolha o tema que preferir nas configurações do perfil.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="legenda">
+      <div class="wrap">
+        <h2 class="sec-title">Legenda rápida</h2>
+        <p class="sec-sub">Termos que aparecem no app e o que significam.</p>
+        <div class="legend">
+          <div class="legend-item">
+            <strong>Provisório</strong>
+            Ainda poucos votos. A nota pode mudar bastante com novas avaliações.
+          </div>
+          <div class="legend-item">
+            <strong>Consolidado</strong>
+            Já tem volume de votos suficiente para a média ser mais estável.
+          </div>
+          <div class="legend-item">
+            <strong>Score de confiança</strong>
+            Junta média das estrelas com quantidade de votos, para o ranking ser justo.
+          </div>
+          <div class="legend-item">
+            <strong>Mesma cidade</strong>
+            Você só avalia quem está na sua cidade. Em outra cidade, só consulta.
+          </div>
+          <div class="legend-item">
+            <strong>Rachão</strong>
+            Jogo casual / pickup, sem ser torneio formal.
+          </div>
+          <div class="legend-item">
+            <strong>Master / Admin</strong>
+            Área de administração para quem gerencia a plataforma.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="cta-block" id="entrar">
+        <h2>Pronto para entrar?</h2>
+        <p>Abra o Rank Hooper no navegador do celular ou no app instalado. É o mesmo sistema.</p>
+        <a class="btn btn-primary" href="https://bask-rank-hooper.vercel.app" target="_blank" rel="noopener">
+          Ir para o aplicativo →
+        </a>
+        <p style="margin-top:16px;font-size:12px;color:var(--muted)">
+          App: <a href="https://bask-rank-hooper.vercel.app" target="_blank" rel="noopener">bask-rank-hooper.vercel.app</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><strong style="color:var(--text)">Rank Hooper</strong> — ranking de basquete peer-to-peer</p>
+      <p style="margin-top:8px">
+        Aplicativo:
+        <a href="https://bask-rank-hooper.vercel.app" target="_blank" rel="noopener">abrir app</a>
+        · Esta página só explica o produto (site separado)
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
