@@ -210,6 +210,36 @@
       text-align: center;
       color: var(--muted); font-size: 12px;
     }
+
+    .qr-block {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      margin: 28px auto 0; max-width: 220px;
+    }
+    .qr-block img {
+      width: 168px; height: 168px;
+      border-radius: 16px;
+      background: #fff;
+      padding: 10px;
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 32px rgba(0, 8, 24, 0.35);
+    }
+    .qr-block p {
+      font-size: 12px; color: var(--muted); text-align: center; line-height: 1.4;
+      margin: 0;
+    }
+    .cta-qr {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+      gap: 28px; margin-top: 8px;
+    }
+    .cta-qr img {
+      width: 140px; height: 140px;
+      border-radius: 14px; background: #fff; padding: 8px;
+      border: 1px solid var(--line);
+    }
+    @media (max-width: 640px) {
+      .qr-block img { width: 148px; height: 148px; }
+    }
+
     footer a { color: var(--secondary); text-decoration: none; font-weight: 600; }
 
     @media (max-width: 560px) {
@@ -491,6 +521,10 @@
             Ver por dentro
           </a>
         </div>
+        <div class="qr-block">
+          <img src="img/qr-app.png" width="168" height="168" alt="QR Code para abrir o Rank Hooper no celular" />
+          <p>Aponte a câmera do celular<br />para abrir o app</p>
+        </div>
       </div>
     </div>
 
@@ -726,12 +760,20 @@
         <svg class="hoop-cta bounce" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9" class="ball-spin"/><path d="M3 12h18M12 3v18M5.6 5.6c3.6 3.6 3.6 9.2 0 12.8M18.4 5.6c-3.6 3.6-3.6 9.2 0 12.8"/></svg>
         <h2>Pronto para entrar?</h2>
         <p>Abra o Rank Hooper no navegador do celular ou no app instalado. É o mesmo sistema.</p>
-        <a class="btn btn-primary" href="https://bask-rank-hooper.vercel.app" target="_blank" rel="noopener">
-          Ir para o aplicativo →
-        </a>
-        <p style="margin-top:16px;font-size:12px;color:var(--muted)">
-          App: <a href="https://bask-rank-hooper.vercel.app" target="_blank" rel="noopener">bask-rank-hooper.vercel.app</a>
-        </p>
+        <div class="cta-qr">
+          <div>
+            <a class="btn btn-primary" href="https://bask-rank-hooper.vercel.app" target="_blank" rel="noopener">
+              Ir para o aplicativo →
+            </a>
+            <p style="margin-top:16px;font-size:12px;color:var(--muted)">
+              App: <a href="https://bask-rank-hooper.vercel.app" target="_blank" rel="noopener">bask-rank-hooper.vercel.app</a>
+            </p>
+          </div>
+          <div class="qr-block" style="margin:0">
+            <img src="img/qr-app.png" width="140" height="140" alt="QR Code Rank Hooper" />
+            <p>Escaneie e entre direto</p>
+          </div>
+        </div>
       </div>
     </div>
   </main>
